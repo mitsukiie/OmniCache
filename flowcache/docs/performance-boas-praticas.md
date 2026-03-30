@@ -240,4 +240,4 @@ cache.invalidateTag("post");  // Remove todas de uma vez
 6. **maxEntries finito** → limita memória usada
 7. **sweepIntervalMs** → remove expirados periodicamente
 
-Seguindo essas práticas, OmniCache vai eliminar 70-90% de latência desnecessária em sua app!
+Seguindo essas práticas, FlowCache vai eliminar 70-90% de latência desnecessária em sua app!

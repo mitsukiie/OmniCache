@@ -30,7 +30,7 @@ SWR (Stale-While-Revalidate) = "retorna o antigo enquanto busca o novo". Usuári
 ## ⚡ Exemplo mínimo funcional
 
 ```ts
-import { createCache } from "omnicache";
+import { createCache } from "flowcache";
 
 const cache = createCache<any>({
   defaultTTL: 10_000,  // 10 segundos
@@ -119,7 +119,7 @@ Com SWR (stale: true):
 ## 🧩 Exemplo real: Dashboard de Analytics
 
 ```ts
-import { createCache } from "omnicache";
+import { createCache } from "flowcache";
 
 type DashboardData = {
   totalUsers: number;

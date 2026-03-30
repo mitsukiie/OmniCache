@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Conceitos Principais 🧠
 
-Aqui explicamos os conceitos fundamentais que tornam OmniCache poderoso. Leia esta página antes de explorar exemplos avançados.
+Aqui explicamos os conceitos fundamentais que tornam FlowCache poderoso. Leia esta página antes de explorar exemplos avançados.
 
 ---
 
@@ -170,7 +170,7 @@ export async function getLatestNews(): Promise<News> {
 
 ### 🧠 O que é
 
-Se 10 requisnações chegarem **simultaneamente** para a mesma chave, OmniCache executa apenas 1 função real. As outras 9 reutilizam a mesma promise pendente.
+Se 10 requisnações chegarem **simultaneamente** para a mesma chave, FlowCache executa apenas 1 função real. As outras 9 reutilizam a mesma promise pendente.
 
 ### ⚡ Exemplo mínimo
 
@@ -361,7 +361,7 @@ cache.invalidatePrefix(`tenant:${tenantId}:`);
 
 ### 🧠 O que é
 
-Quando você chama `fetch` e a chave não está em cache, OmniCache cria uma "promise pendente" que outras chamadas simultâneas reutilizam (deduplicação).
+Quando você chama `fetch` e a chave não está em cache, FlowCache cria uma "promise pendente" que outras chamadas simultâneas reutilizam (deduplicação).
 
 ### ⚡ Exemplo mínimo
 
@@ -386,7 +386,7 @@ console.log(cache.stats().pending); // 0 (já resolveu)
 
 ### 💡 Boas práticas
 
-- OmniCache limpa promises pendentes antigas automaticamente (veja `maxPendingAgeMs`).
+- FlowCache limpa promises pendentes antigas automaticamente (veja `maxPendingAgeMs`).
 - Monitore `cache.stats().pending` para detectar travamentos.
 - Se `pending` cresce infinitamente → suas funções não estão resolvendo.
 

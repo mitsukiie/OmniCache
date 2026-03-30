@@ -14,7 +14,7 @@ function HomepageHeader() {
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className={styles.heroGlow} />
       <div className="container">
-        <p className={styles.heroEyebrow}>OmniCache • Cache em memória para Node.js</p>
+        <p className={styles.heroEyebrow}>FlowCache • Cache em memória para Node.js</p>
         <Heading as="h1" className="hero__title">
           {siteConfig.title}
         </Heading>
@@ -47,7 +47,7 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="Documentação oficial de uso do OmniCache para Node.js com JavaScript e TypeScript.">
+      description="Documentação oficial de uso do FlowCache para Node.js com JavaScript e TypeScript.">
       <HomepageHeader />
       <main>
         <HomepageFeatures />

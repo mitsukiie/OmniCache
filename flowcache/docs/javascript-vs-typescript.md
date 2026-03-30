@@ -6,12 +6,12 @@ title: JavaScript vs TypeScript
 
 ## 🧠 Diferenças na prática
 
-Ambas as linguagens funcionam com OmniCache, mas TypeScript oferece segurança de tipos que detecta bugs mais cedo.
+Ambas as linguagens funcionam com FlowCache, mas TypeScript oferece segurança de tipos que detecta bugs mais cedo.
 
 ## JavaScript - Mais rápido de começar
 
 ```js
-import { Cache } from "omnicache";
+import { Cache } from "flowcache";
 
 const cache = new Cache({ defaultTTL: 30_000 });
 
@@ -41,7 +41,7 @@ console.log(user.age);  // undefined (typo: deveria ser 'email'?)
 ## TypeScript - Mais seguro em produção
 
 ```ts
-import { Cache } from "omnicache";
+import { Cache } from "flowcache";
 
 // Defina o tipo esperado
 type User = {
@@ -125,11 +125,11 @@ if (user?.naame === "Alice") {  // ❌ Erro imediatamente!
 
 ## 💡 Abordagem híbrida
 
-Se sua app é em JavaScript, pode usar TypeScript apenas com OmniCache:
+Se sua app é em JavaScript, pode usar TypeScript apenas com FlowCache:
 
 ```js
 // seu-cache.ts (TypeScript)
-import { Cache } from "omnicache";
+import { Cache } from "flowcache";
 
 type User = { id: string; name: string };
 export const userCache = new Cache<User>({ defaultTTL: 30_000 });

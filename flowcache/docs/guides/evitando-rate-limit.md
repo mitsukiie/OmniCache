@@ -29,7 +29,7 @@ API externa tem limite: ex GitHub = 60 reqs/hora (unauthenticated). Sem cache, s
 ## ⚡ Exemplo mínimo funcional
 
 ```ts
-import { createCache } from "omnicache";
+import { createCache } from "flowcache";
 
 type GitHubUser = {
   login: string;
@@ -54,7 +54,7 @@ export async function getGitHubUser(login: string): Promise<GitHubUser> {
 }
 
 // Se 20 requests chegam juntas "getGitHubUser('torvalds')"
-// OmniCache faz UMA chamada à API
+// FlowCache faz UMA chamada à API
 // Todos 20 recebem mesma resposta
 ```
 
@@ -63,7 +63,7 @@ export async function getGitHubUser(login: string): Promise<GitHubUser> {
 Dashboard mostra top 10 developers. Se 100 users acessam simultaneamente:
 
 ```ts
-import { createCache } from "omnicache";
+import { createCache } from "flowcache";
 
 type Developer = {
   login: string;

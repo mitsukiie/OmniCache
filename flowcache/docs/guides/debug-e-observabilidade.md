@@ -31,7 +31,7 @@ Entender o que cache está fazendo: hits? misses? deduplicação funcionando? Se
 ## ⚡ Exemplo mínimo funcional
 
 ```ts
-import { createCache } from "omnicache";
+import { createCache } from "flowcache";
 
 const cache = createCache<any>({
   defaultTTL: 10_000,
@@ -61,7 +61,7 @@ cache.fetch("key1", async () => 1);
 ## 🧩 Exemplo real: Production Monitoring
 
 ```ts
-import { createCache } from "omnicache";
+import { createCache } from "flowcache";
 
 type AppMetrics = {
   hitRate: number;

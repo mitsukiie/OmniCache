@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'OmniCache',
+  title: 'FlowCache',
   tagline: 'Documentação oficial de uso para Node.js',
   favicon: 'img/favicon.ico',
 
@@ -23,7 +23,7 @@ const config: Config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'mitsukiie', // Usually your GitHub org/user name.
-  projectName: 'OmniCache', // Usually your repo name.
+  projectName: 'FlowCache', // Usually your repo name.
 
   onBrokenLinks: 'throw',
 
@@ -42,7 +42,7 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           routeBasePath: 'docs',
-          editUrl: 'https://github.com/mitsukiie/OmniCache/tree/main/omnicache/',
+          editUrl: 'https://github.com/mitsukiie/FlowCache/tree/main/flowcache/',
         },
         blog: false,
         theme: {
@@ -58,9 +58,9 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'OmniCache',
+      title: 'FlowCache',
       logo: {
-        alt: 'OmniCache Logo',
+        alt: 'FlowCache Logo',
         src: 'img/logo.svg',
       },
       items: [
@@ -71,7 +71,7 @@ const config: Config = {
           label: 'Documentação',
         },
         {
-          href: 'https://github.com/mitsukiie/OmniCache',
+          href: 'https://github.com/mitsukiie/FlowCache',
           label: 'GitHub',
           position: 'right',
         },
@@ -98,7 +98,7 @@ const config: Config = {
           items: [
             {
               label: 'NPM',
-              href: 'https://www.npmjs.com/package/omnicache',
+              href: 'https://www.npmjs.com/package/flowcache',
             },
           ],
         },
@@ -107,12 +107,12 @@ const config: Config = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/mitsukiie/OmniCache',
+              href: 'https://github.com/mitsukiie/FlowCache',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} OmniCache.`,
+      copyright: `Copyright © ${new Date().getFullYear()} FlowCache.`,
     },
     prism: {
       theme: prismThemes.github,

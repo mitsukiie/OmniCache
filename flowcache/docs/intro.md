@@ -2,11 +2,11 @@
 sidebar_position: 1
 ---
 
-# OmniCache
+# FlowCache
 
 ## 🧠 O que é
 
-OmniCache é uma biblioteca de **cache em memória para Node.js** que armazena valores por chave com tempo de expiração automático. Funciona localmente no seu processo Node.js, sem dependências externas, e oferece recursos avançados como deduplicação de requisições simultâneas e "stale-while-revalidate".
+FlowCache é uma biblioteca de **cache em memória para Node.js** que armazena valores por chave com tempo de expiração automático. Funciona localmente no seu processo Node.js, sem dependências externas, e oferece recursos avançados como deduplicação de requisições simultâneas e "stale-while-revalidate".
 
 **Analogia simples:** é como ter um anotador que guarda o resultado da última pergunta e responde imediatamente se alguém fizer a mesma pergunta novamente (enquanto o resultado ainda é válido).
 
@@ -17,7 +17,7 @@ Programas Node.js frequentemente consultam as mesmas informações repetidamente
 - Um bot Discord responde sempre com os mesmos dados → overhead desnecessário.
 - Um dashboard recarrega a página → a mesma query no banco roda 3x.
 
-OmniCache evita isso:
+FlowCache evita isso:
 1. **Elimina regeneração desnecessária:** guarda resultado para poupar processamento.
 2. **Deduplica requests concorrentes:** 50 chamadas simultâneas = 1 request real.
 3. **Melhora latência:** retorna do memória em microsegundos (vs ms/s da rede).
@@ -25,7 +25,7 @@ OmniCache evita isso:
 
 ## ✅ Quando usar
 
-**Use OmniCache quando:**
+**Use FlowCache quando:**
 - Você chama uma API/banco de dados múltiplas vezes com os mesmos parâmetros.
 - Seus dados mudam lentamente (segundos~minutos).
 - Latência importa (cada ms conta para UX).
@@ -40,7 +40,7 @@ OmniCache evita isso:
 
 ## 🚫 Quando NÃO usar
 
-**NÃO use OmniCache quando:**
+**NÃO use FlowCache quando:**
 - Você precisa compartilhar cache entre **múltiplos processos/servidores** (use Redis, Memcached).
 - Os dados precisam **sobreviver a restart** do processo (use banco de dados).
 - Você exige **consistência forte** entre instâncias (Redis com replicação seria solução).
@@ -50,7 +50,7 @@ OmniCache evita isso:
 ```
 Seu código
      ↓
-[OmniCache L1 - memória local, rápido]
+[FlowCache L1 - memória local, rápido]
      ↓
 [Redis/Memcached L2 - compartilhado, persistência]
      ↓
@@ -62,7 +62,7 @@ Seu código
 O menor código que demonstra cache funcionando:
 
 ```js
-import { Cache } from "omnicache";
+import { Cache } from "flowcache";
 
 const cache = new Cache({ defaultTTL: 10_000 }); // TTL = 10 segundos
 
@@ -91,7 +91,7 @@ console.log(cache.stats()); // {hits: 2, misses: 1, ...}
 Situação: você tem um bot Discord que retorna informações de perfil de jogador.
 
 ```ts
-import { Cache } from "omnicache";
+import { Cache } from "flowcache";
 
 type PlayerProfile = {
   id: string;
@@ -223,7 +223,7 @@ cache.invalidateTag(`user:${userId}`); // Para apagar por tag
 ## 📦 Instalação
 
 ```bash
-npm install omnicache
+npm install flowcache
 ```
 
 ## 🔧 Requisitos

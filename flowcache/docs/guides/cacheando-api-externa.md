@@ -6,7 +6,7 @@ title: Cacheando API Externa
 
 ## 🧠 O Caso
 
-Sua app conversa com uma API externa lenta (GitHub, Twitter, etc). Sem cache, cada requisição toma 200-500ms. Com OmniCache, reduz para 1-2ms após primeira chamada.
+Sua app conversa com uma API externa lenta (GitHub, Twitter, etc). Sem cache, cada requisição toma 200-500ms. Com FlowCache, reduz para 1-2ms após primeira chamada.
 
 ## ❓ Por que não deixa direto?
 
@@ -30,7 +30,7 @@ Sua app conversa com uma API externa lenta (GitHub, Twitter, etc). Sem cache, ca
 ## ⚡ Exemplo mínimo funcional
 
 ```ts
-import { createCache } from "omnicache";
+import { createCache } from "flowcache";
 
 const apiCache = createCache<any>();
 
@@ -56,7 +56,7 @@ console.log(repo.stars);
 Dashboard que mostra último commit do GitHub de 10 repositórios diferentes:
 
 ```ts
-import { createCache } from "omnicache";
+import { createCache } from "flowcache";
 
 type GithubRepo = {
   full_name: string;
@@ -140,7 +140,7 @@ t=300:  Todos recebem github response de User1
         Mas 9 requests foram feitas! ❌
 ```
 
-Com OmniCache:
+Com FlowCache:
 ```
 t=0:    User1 faz request → cache.fetch começa
 t=10:   User2 faz request → dedup (aguarda User1)

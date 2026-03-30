@@ -37,7 +37,7 @@ const cache = createCache({
 ## 🧩 Exemplo real de produção
 
 ```ts
-import { createCache } from "omnicache";
+import { createCache } from "flowcache";
 
 type User = { id: string; name: string };
 type Post = { id: string; title: string };

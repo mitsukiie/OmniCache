@@ -6,7 +6,7 @@ title: hooks
 
 ## 🧠 O que é
 
-Hooks são callbacks que OmniCache dispara em eventos específicos (hit, miss, set, delete, refresh). Úteis para logging e observabilidade.
+Hooks são callbacks que FlowCache dispara em eventos específicos (hit, miss, set, delete, refresh). Úteis para logging e observabilidade.
 
 ## ❓ Por que existe
 

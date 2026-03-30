@@ -6,7 +6,7 @@ title: fetch
 
 ## 🧠 O que é
 
-`fetch` é o **método principal** de OmniCache. Ele:
+`fetch` é o **método principal** de FlowCache. Ele:
 1. Verifica se uma chave existe em cache e é válida.
 2. Se existe, retorna instantaneamente.
 3. Se não existe, executa sua função async.
@@ -55,7 +55,7 @@ console.log(result); // "valor calculado"
 ```
 
 **O que acontece:**
-1. OmniCache verifica se "minha-chave" existe.
+1. FlowCache verifica se "minha-chave" existe.
 2. Não existe → executa função async.
 3. Guarda resultado com TTL padrão (5 minutos).
 4. Retorna "valor calculado".
@@ -65,7 +65,7 @@ console.log(result); // "valor calculado"
 Situação: um bot Discord que consulta dados de jogador de uma API externa.
 
 ```ts
-import { Cache } from "omnicache";
+import { Cache } from "flowcache";
 
 type PlayerData = {
   id: string;

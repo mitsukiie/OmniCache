@@ -2,12 +2,12 @@ node_modules
 dist
 bun.lock
 
-# omnicache
-omnicache/build
-omnicache/node_modules
-omnicache/dist
-omnicache/.docusaurus
-omnicache/package-lock.json
+# flowcache
+flowcache/build
+flowcache/node_modules
+flowcache/dist
+flowcache/.docusaurus
+flowcache/package-lock.json
 
 # test
 bot

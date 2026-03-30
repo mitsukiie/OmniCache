@@ -28,7 +28,7 @@ Multi-tenant = múltiplos clientes (empresas) compartilham mesma infraestrutura.
 ## ⚡ Exemplo mínimo funcional
 
 ```ts
-import { createCache } from "omnicache";
+import { createCache } from "flowcache";
 
 type CompanyBilling = {
   month: string;
@@ -74,7 +74,7 @@ const techStart = await getBilling("tech-start");
 Plataforma de CRM com múltiplos clientes. Cada cliente pode ter múltiplas "workspaces":
 
 ```ts
-import { createCache } from "omnicache";
+import { createCache } from "flowcache";
 
 type Contact = {
   id: string;

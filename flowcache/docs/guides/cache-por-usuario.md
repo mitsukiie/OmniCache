@@ -30,7 +30,7 @@ Quando app é multi-user, cada usuário tem seus próprios dados. Sem isolamento
 ## ⚡ Exemplo mínimo funcional
 
 ```ts
-import { createCache } from "omnicache";
+import { createCache } from "flowcache";
 
 type UserSettings = { theme: "light" | "dark"; language: string };
 
@@ -58,7 +58,7 @@ const userBSettings = await getUserSettings("user_456");  // Outro cache
 Dashboard que carrega preferências, último projeto aberto, e notifications do user:
 
 ```ts
-import { createCache } from "omnicache";
+import { createCache } from "flowcache";
 
 type UserProfile = {
   userId: string;

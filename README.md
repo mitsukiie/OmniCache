@@ -1,8 +1,8 @@
-# OmniCache
-![npm](https://img.shields.io/npm/v/omnicache)
-![downloads](https://img.shields.io/npm/dm/omnicache)
-![license](https://img.shields.io/npm/omnicache)
-![types](https://img.shields.io/npm/types/omnicache)
+# FlowCache
+![npm](https://img.shields.io/npm/v/flowcache)
+![downloads](https://img.shields.io/npm/dm/flowcache)
+![license](https://img.shields.io/npm/flowcache)
+![types](https://img.shields.io/npm/types/flowcache)
 
 Cache em memória moderno para Node.js
 
@@ -15,7 +15,7 @@ Cache em memória moderno para Node.js
 
 ## 🚀 Quick Start
 ```js
-const { createCache } = require("omnicache");
+const { createCache } = require("flowcache");
 
 const cache = createCache({
   user: {
@@ -31,8 +31,8 @@ await cache.user.profile.fetch("1", async () => {
 
 ## 📚 Documentação
 
-- Repositório: https://github.com/mitsukiie/OmniCache
-- Documentação: https://omnicache.vercel.app/docs/intro
+- Repositório: https://github.com/mitsukiie/FlowCache
+- Documentação: https://flowcache.vercel.app/docs/intro
 
 Para manter este README objetivo, os exemplos avançados e a referência completa da API ficam centralizados na documentação.
 
@@ -46,7 +46,7 @@ Para manter este README objetivo, os exemplos avançados e a referência complet
 - Hooks e observabilidade
 - Zero dependências
 
-## ✨ Por que OmniCache?
+## ✨ Por que FlowCache?
 
 - Sem configuração obrigatória
 - Tipagem automática
@@ -62,14 +62,14 @@ Para manter este README objetivo, os exemplos avançados e a referência complet
 ## 📦 Instalação
 
 ```bash
-npm install omnicache
+npm install flowcache
 ```
 
 ## 🔎 Próximos passos
 
-- Guia de início rápido: [Quick Start](https://omnicache.vercel.app/docs/quick-start)
-- Referência da API: [API de Cache](https://omnicache.vercel.app/docs/api/cache)
-- Guias práticos: [Guides](https://omnicache.vercel.app/docs/category/guides)
+- Guia de início rápido: [Quick Start](https://flowcache.vercel.app/docs/quick-start)
+- Referência da API: [API de Cache](https://flowcache.vercel.app/docs/api/cache)
+- Guias práticos: [Guides](https://flowcache.vercel.app/docs/category/guides)
 
 Os exemplos detalhados (TypeScript, namespaces, invalidação por tag/prefixo, hooks e wrap) estão documentados nesses links.
 

@@ -1,5 +1,5 @@
 {
-  "name": "omnicache",
+  "name": "flowcache",
   "version": "1.0.0",
   "description": "Uma pequena biblioteca de cache em memória.",
   "type": "module",
@@ -8,13 +8,13 @@
     "name": "Mitsuki",
     "url": "https://github.com/mitsukiie"
   },
-  "homepage": "https://github.com/mitsukiie/OmniCache#readme",
+  "homepage": "https://github.com/mitsukiie/FlowCache#readme",
   "bugs": {
-    "url": "https://github.com/mitsukiie/OmniCache/issues"
+    "url": "https://github.com/mitsukiie/FlowCache/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mitsukiie/OmniCache.git"
+    "url": "https://github.com/mitsukiie/FlowCache.git"
   },
   "keywords": [
     "cache",

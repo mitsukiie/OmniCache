@@ -6,7 +6,7 @@ title: Cache
 
 ## 🧠 O que é
 
-A classe `Cache<T>` é a classe principal de OmniCache. Ela é um armazenador tipado de dados em memória que:
+A classe `Cache<T>` é a classe principal de FlowCache. Ela é um armazenador tipado de dados em memória que:
 - Guarda valores por chave com expiração automática (TTL).
 - Deduplica promises simultâneas para a mesma chave.
 - Oferece invalidatação granular por prefixo/tag.
@@ -37,7 +37,7 @@ Você precisa de uma abstracão que:
 ## ⚡ Exemplo mínimo funcional
 
 ```ts
-import { Cache } from "omnicache";
+import { Cache } from "flowcache";
 
 // Criar instância
 const cache = new Cache<{ greeting: string }>({
@@ -53,7 +53,7 @@ console.log(result); // { greeting: "World" }
 ## 🧩 Exemplo real de produção
 
 ```ts
-import { Cache } from "omnicache";
+import { Cache } from "flowcache";
 
 type GithubRepo = {
   id: number;

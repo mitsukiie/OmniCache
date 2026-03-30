@@ -27,7 +27,7 @@ Bot Discord que reage a comandos (pesquisa usuário, retorna info). Sem cache, c
 ## ⚡ Exemplo mínimo funcional
 
 ```ts
-import { createCache } from "omnicache";
+import { createCache } from "flowcache";
 import { Client, Events } from "discord.js";
 
 const cache = createCache<any>();
@@ -58,7 +58,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
 Bot que tem comando `/server-info` com cache de status:
 
 ```ts
-import { createCache } from "omnicache";
+import { createCache } from "flowcache";
 import { Client, Events, SlashCommandBuilder } from "discord.js";
 
 type ServerInfo = {

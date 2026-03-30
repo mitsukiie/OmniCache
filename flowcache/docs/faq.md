@@ -37,7 +37,7 @@ Comece simples, monitore `hits`/`misses` em `stats()` e ajuste com dados reais.
 
 ## 4) O que é deduplicação na prática?
 
-Quando várias requisições pedem a mesma chave ao mesmo tempo, o OmniCache roda apenas uma execução real e compartilha o resultado com as demais.
+Quando várias requisições pedem a mesma chave ao mesmo tempo, o FlowCache roda apenas uma execução real e compartilha o resultado com as demais.
 
 Isso reduz custo de upstream e ajuda a evitar rate limit.
 
@@ -47,7 +47,7 @@ Sim, mas lembrando: o cache é local por processo.
 
 Em múltiplas instâncias/containers:
 
-- Use OmniCache como camada local (L1).
+- Use FlowCache como camada local (L1).
 - Se precisar compartilhamento global, adicione Redis/Memcached como L2.
 
 ## 6) Como evitar vazamento de dados entre usuários/tenants?
@@ -91,7 +91,7 @@ Sinais de alerta:
 
 Se você usa varredura periódica (sweep), chame `dispose()` no encerramento para liberar timers internos.
 
-## 10) OmniCache funciona com JavaScript puro?
+## 10) FlowCache funciona com JavaScript puro?
 
 Sim. Você pode usar sem TypeScript.
 
@@ -108,4 +108,4 @@ TypeScript é opcional e ajuda com autocomplete, contratos de dados e segurança
 
 Abra uma issue no repositório do projeto:
 
-- [GitHub](https://github.com/mitsukiie/OmniCache)
+- [GitHub](https://github.com/mitsukiie/FlowCache)

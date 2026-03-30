@@ -17,13 +17,13 @@ Você tem uma função que busca dados (API, banco, etc) e quer evitar chamadas 
 ### Instalação
 
 ```bash
-npm install omnicache
+npm install flowcache
 ```
 
 ### Código mínimo
 
 ```js
-import { Cache } from "omnicache";
+import { Cache } from "flowcache";
 
 // 1️⃣ Crie uma instância de cache
 const cache = new Cache({ defaultTTL: 30_000 }); // TTL = 30 segundos
@@ -63,7 +63,7 @@ console.log(cache.stats());
 Crie `test.js`:
 
 ```js
-import { Cache } from "omnicache";
+import { Cache } from "flowcache";
 
 const cache = new Cache({ defaultTTL: 5_000 }); // 5 segundos apenas
 
@@ -98,7 +98,7 @@ node test.js
 No TypeScript, você define o tipo genérico `Cache<T>` para tipagem forte:
 
 ```ts
-import { Cache } from "omnicache";
+import { Cache } from "flowcache";
 
 // 1️⃣ Defina o tipo de dado que você vai cachear
 type User = {
@@ -142,7 +142,7 @@ console.log(stats.hits);      // TypeScript sabe que hits é number ✅
 
 ## ⚡ Deduplicação (o super-poder)
 
-O maior benefício do OmniCache é deduplicar requests simultâneos:
+O maior benefício do FlowCache é deduplicar requests simultâneos:
 
 ```ts
 const cache = new Cache<number>();
@@ -184,7 +184,7 @@ Promise.all(Array(10).fill(null).map(() => {
 Situação: seu bot Discord responde comandos de perfil.
 
 ```ts
-import { Cache } from "omnicache";
+import { Cache } from "flowcache";
 import { Client, Events, GatewayIntentBits } from "discord.js";
 
 type Profile = { userId: string; level: number; score: number };
@@ -235,7 +235,7 @@ await cache.fetch(`user:${userId}`, () => getUser(userId));
 ```
 
 **✅ Correto:**
-- Use OmniCache para cache local de cada instância.
+- Use FlowCache para cache local de cada instância.
 - Use Redis se precisar compartilhar entre processos.
 
 ### 3. TTL muito alta para dados dinâmicos

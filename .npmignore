@@ -1,4 +1,4 @@
-omnicache
+flowcache
 src
 !dist/src
 !dist/src/**
