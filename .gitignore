@@ -1,0 +1,13 @@
+node_modules
+dist
+bun.lock
+
+# omnicache
+omnicache/build
+omnicache/node_modules
+omnicache/dist
+omnicache/.docusaurus
+omnicache/package-lock.json
+
+# test
+bot

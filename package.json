@@ -1,0 +1,56 @@
+{
+  "name": "omnicache",
+  "version": "1.0.0",
+  "description": "Uma pequena biblioteca de cache em memória.",
+  "type": "module",
+  "license": "MIT",
+  "author": {
+    "name": "Mitsuki",
+    "url": "https://github.com/mitsukiie"
+  },
+  "homepage": "https://github.com/mitsukiie/OmniCache#readme",
+  "bugs": {
+    "url": "https://github.com/mitsukiie/OmniCache/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mitsukiie/OmniCache.git"
+  },
+  "keywords": [
+    "cache",
+    "typescript",
+    "library"
+  ],
+
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "default": "./dist/index.js"
+    }
+  },
+  "engines": {
+    "node": ">=18",
+    "bun": ">=1.0.0"
+  },
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "bun build src/index.ts --outdir dist --target node --format esm && bun build src/index.ts --target node --format cjs --outfile dist/index.cjs && bunx tsc --emitDeclarationOnly --outDir dist",
+    "test": "bun test"
+  },
+   "devDependencies": {
+    "@types/bun": "latest",
+    "@types/node": "^25.5.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.9.3"
+  }
+}
